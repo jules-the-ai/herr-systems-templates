@@ -49,3 +49,8 @@ body{font-size:clamp(14px,1.05vw,16px)}.logo{font-size:clamp(18px,1.55vw,23px)}.
 
 /* The site-wide footer rule is flex-based; this experimental footer must be a normal block so copy follows—not sits beside—the SVG. */
 .global-footer{display:block}
+
+/* Desktop masthead content intentionally shares the exact width of the page shell. */
+.global-header{padding:0}.global-header .header-inner{width:min(1240px,calc(100% - 28px));min-height:78px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand-tools{display:flex;align-items:center;gap:13px}.global-header .theme-toggle{width:43px;height:43px;margin:0;padding:0;display:grid;place-items:center;border:1px solid #9cdcff;background:#123b70;color:#fff}.global-header .theme-toggle span{font-size:21px;line-height:1}.global-header .theme-toggle:hover,.global-header .theme-toggle:focus-visible{background:var(--lime);color:var(--ink)}
+/* The full desktop masthead becomes a normal top bar on compact screens; the fixed bottom bar uses the same blue. */
+@media(max-width:720px){.global-header{position:static;min-height:0}.global-header .header-inner{width:calc(100% - 30px);min-height:70px;gap:12px}.global-header .global-nav{display:none}.global-header .theme-toggle{width:41px;height:41px}.mobile-nav{min-height:72px;background:#164f91}.mobile-nav a span{font-size:23.5px}main{padding-bottom:94px}footer{padding-bottom:86px}}

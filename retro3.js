@@ -6,7 +6,9 @@
     root.dataset.theme = theme;
     const dark = theme === 'dark';
     toggle.setAttribute('aria-pressed', String(dark));
-    toggle.innerHTML = `<span aria-hidden="true">${dark ? '☾' : '☀'}</span> ${dark ? 'DARK MODE' : 'LIGHT MODE'}`;
+    toggle.setAttribute('aria-label', dark ? 'Dark mode active — switch to light mode' : 'Light mode active — switch to dark mode');
+    toggle.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    toggle.innerHTML = `<span aria-hidden="true">${dark ? '☀' : '☾'}</span>`;
   }
   paint(localStorage.getItem(key) || 'dark');
   toggle.addEventListener('click', () => {

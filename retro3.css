@@ -46,3 +46,6 @@ body{font-size:clamp(14px,1.05vw,16px)}.logo{font-size:clamp(18px,1.55vw,23px)}.
 
 /* One solid masthead blue means Safari's static toolbar color and the navigation are exactly the same in either page theme. */
 .global-header,:root[data-theme=light] .global-header{background:#164f91}
+
+/* The site-wide footer rule is flex-based; this experimental footer must be a normal block so copy follows—not sits beside—the SVG. */
+.global-footer{display:block}

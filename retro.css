@@ -10,3 +10,6 @@
 
 /* Compact mobile shell: no ornamental side rails, just useful content and an always-available bottom nav. */
 .mobile-nav{display:none}@media(max-width:720px){.site-shell{width:100%;margin:0;border-left:0;border-right:0;box-shadow:none}.nav{display:none}main{padding:18px 18px 86px}.mobile-nav{position:fixed;z-index:20;left:0;right:0;bottom:0;min-height:64px;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--cyan);background:var(--blue);box-shadow:0 -4px 0 var(--space)}.mobile-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--on-blue);font:700 9px var(--mono);letter-spacing:.03em;text-decoration:none;text-transform:uppercase}.mobile-nav a span{font:400 18px/1 var(--pixel);color:var(--lime)}.mobile-nav a:active,.mobile-nav a:focus-visible{background:var(--lime);color:var(--ink);outline:none}.mobile-nav a:active span,.mobile-nav a:focus-visible span{color:var(--ink)}footer{padding-bottom:78px}}@media(max-width:480px){.site-shell{width:100%;margin:0;border-left:0;border-right:0;box-shadow:none}main{padding-left:14px;padding-right:14px}}
+
+/* Contact is a blue information surface in both themes; never inherit page-copy color here. */
+.contact{color:var(--on-blue)}

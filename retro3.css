@@ -39,3 +39,7 @@ body{font-size:clamp(14px,1.05vw,16px)}.logo{font-size:clamp(18px,1.55vw,23px)}.
 
 /* Keep every footer detail in a clear centered stack beneath the scene. */
 .footer-info>div{flex-direction:column;align-items:center;gap:8px}.footer-info>div+div{padding-top:3px}.footer-info b,.footer-info span,.footer-info a{display:block}
+
+/* Single-column footer copy: every line follows the SVG scene in source and on screen. */
+.footer-info{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center}.footer-info>div{display:contents}.footer-info b,.footer-info span,.footer-info a{display:block;margin:0}.footer-info span{max-width:64ch}.footer-info a{margin-top:5px}
+@media(max-width:720px){.footer-info{padding:18px 16px 88px}}

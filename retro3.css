@@ -43,3 +43,6 @@ body{font-size:clamp(14px,1.05vw,16px)}.logo{font-size:clamp(18px,1.55vw,23px)}.
 /* Single-column footer copy: every line follows the SVG scene in source and on screen. */
 .footer-info{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center}.footer-info>div{display:contents}.footer-info b,.footer-info span,.footer-info a{display:block;margin:0}.footer-info span{max-width:64ch}.footer-info a{margin-top:5px}
 @media(max-width:720px){.footer-info{padding:18px 16px 88px}}
+
+/* One solid masthead blue means Safari's static toolbar color and the navigation are exactly the same in either page theme. */
+.global-header,:root[data-theme=light] .global-header{background:#164f91}

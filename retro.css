@@ -15,7 +15,7 @@
 .contact{color:var(--on-blue)}
 
 /* Hexagonal mark from Emily’s archived davy.in logo, reused as the Herr Systems mark. */
-.logo-mark{width:51px;height:51px;padding:0;border:0;background:transparent;box-shadow:none}.logo-mark img{display:block;width:46px;height:46px;object-fit:contain}@media(max-width:480px){.logo-mark{width:44px;height:44px}.logo-mark img{width:42px;height:42px}}
+.logo-mark{width:56px;height:56px;padding:0;border:0;background:transparent;box-shadow:none}.logo-mark img{display:block;width:51px;height:51px;object-fit:contain}@media(max-width:480px){.logo-mark{width:49px;height:49px}.logo-mark img{width:46px;height:46px}}
 
 /* Informational accent text needs its own light-theme token: bright lime is reserved for blue/dark surfaces and controls. */
 :root{--info-accent:var(--lime)}:root[data-theme=light]{--info-accent:#4d7000}.kicker,.hero h1 em,.about li:before{color:var(--info-accent)}.contact h2 em{color:var(--lime)}:root[data-theme=light] .kicker{font-size:12px;font-weight:700;letter-spacing:.09em}

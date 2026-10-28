@@ -36,3 +36,6 @@ body{font-size:clamp(14px,1.05vw,16px)}.logo{font-size:clamp(18px,1.55vw,23px)}.
 
 /* A real inline SVG keeps the footer scene visible on every browser; the copy is centered beneath it. */
 .pixel-scene{display:block;width:100%;height:clamp(260px,28vw,400px);background:#170538;image-rendering:pixelated}.global-footer{background:#170538}.footer-info{justify-content:center;flex-direction:column;gap:11px;text-align:center}.footer-info>div{justify-content:center}.footer-info b{display:block}.footer-info span,.footer-info a{font-size:12px}@media(max-width:720px){.pixel-scene{height:255px}.footer-info{padding:18px 16px 88px;align-items:center}.footer-info>div{align-items:center}}
+
+/* Keep every footer detail in a clear centered stack beneath the scene. */
+.footer-info>div{flex-direction:column;align-items:center;gap:8px}.footer-info>div+div{padding-top:3px}.footer-info b,.footer-info span,.footer-info a{display:block}

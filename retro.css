@@ -19,3 +19,6 @@
 
 /* Informational accent text needs its own light-theme token: bright lime is reserved for blue/dark surfaces and controls. */
 :root{--info-accent:var(--lime)}:root[data-theme=light]{--info-accent:#4d7000}.kicker,.hero h1 em,.about li:before{color:var(--info-accent)}.contact h2 em{color:var(--lime)}:root[data-theme=light] .kicker{font-size:12px;font-weight:700;letter-spacing:.09em}
+
+/* On compact screens, introduce the visual first and place the hero copy directly beneath it. */
+@media(max-width:720px){.hero-copy{order:2}.monitor{order:1}}

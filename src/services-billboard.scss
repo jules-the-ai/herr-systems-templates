@@ -1,5 +1,7 @@
 // Opt-in variant only. Never override the original services directory.
 .services-billboard-variant {
+  .detail-breadcrumb { display: flex; gap: 12px; margin-bottom: 24px; color: var(--directory-muted); font: 500 12px/1.5 var(--mono); }
+  .detail-breadcrumb a { color: var(--cyan); text-underline-offset: 4px; }
   .billboard-stage {
     position: relative;
     isolation: isolate;
@@ -45,6 +47,7 @@
 }
 @keyframes directory-pixel-drift { from { transform: translateY(0); } to { transform: translateY(12px); } }
 @media (max-width: 720px) {
+  .services-billboard-variant .detail-breadcrumb { margin-bottom: 20px; }
   .services-billboard-variant .billboard-stage .directory-intro { width: 100%; padding: 30px 18px; }
 }
 @media (max-width: 480px) {

@@ -18,8 +18,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(process.cwd(), "index.html"),
-        services: resolve(process.cwd(), "services/index.html"),
-        webDesign: resolve(process.cwd(), "services/web-design/index.html"),
       },
     },
   },

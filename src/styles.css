@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;700;800&family=VT323&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-signal-blue: #164f91;
+  --color-signal-cyan: #49f5e6;
+  --color-signal-lime: #d5ff48;
+  --font-sans: "DM Sans", Arial, sans-serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+@import "./generated.css";

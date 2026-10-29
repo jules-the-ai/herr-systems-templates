@@ -40,3 +40,11 @@ npm run preview
 ## Staff preview
 
 The About page uses explicitly labeled sample profiles, not real staff claims. Replace staff names, roles, bios, and `public/assets/about/headshot-*.svg` with actual details and photos. Photos use a 6:7 desktop crop and square mobile crop with `object-fit: cover`; adjust `object-position` per image as needed. Remove the STAFF PREVIEW label, preview note, and HEADSHOT overlays when final content is ready. All preview illustrations are original local SVGs.
+
+## Blog templates
+
+- `/blog/` — featured story plus two article cards.
+- `/blog/a-clearer-website/` — full article template with top featured image, caption, byline, reading-time label, contents navigation, pull quote, takeaway, and author block.
+- `/blog/start-small-with-automation/` and `/blog/what-good-hosting-should-cover/` — additional sample articles so every index card opens a real page.
+
+Edit static content in `public/blog/` and component styles in `src/blog.scss` (compiled to `public/blog.css`). These are demonstration editorial entries for the template, not a CMS or automated publishing system. Reading times are editorial labels. To add a post, copy an article directory, update its title/description, breadcrumb, copy, metadata, contents links, and card on the index. Replace the article-cover image src/alt and matching index image with your own image; 1200 × 630 is recommended. Images have explicit dimensions and responsive sizing. Remove the entire `figure.article-cover` when a post has no featured image; no empty image container or script depends on it. The committed SVG illustrations are original and locally served. Shared shell files and archived designs are unchanged apart from navigation links on active pages.

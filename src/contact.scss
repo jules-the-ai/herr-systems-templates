@@ -19,7 +19,16 @@
  input::placeholder,textarea::placeholder { color:var(--desk-muted); opacity:.85; }
  textarea { resize:vertical; min-height:150px; }
  .topic-field { margin-bottom:22px; }
- .desk-field select { color-scheme:dark; min-height:53px; }
+ // Retain the real select for keyboard, screen-reader, and mobile picker support.
+ .desk-select { position:relative; min-width:0; }
+ .desk-field .desk-select select { appearance:none; -webkit-appearance:none; color-scheme:dark; min-height:54px; padding:13px 62px 13px 14px; cursor:pointer; text-overflow:ellipsis; }
+ .desk-select::before { content:''; position:absolute; z-index:1; right:1px; top:1px; bottom:1px; width:46px; border-left:1px solid var(--line); background:var(--desk-surface); pointer-events:none; }
+ .desk-select::after { content:''; position:absolute; z-index:2; right:20px; top:50%; width:8px; height:8px; border-right:2px solid var(--cyan); border-bottom:2px solid var(--cyan); transform:translateY(-70%) rotate(45deg); pointer-events:none; }
+ .desk-select:hover select,.desk-select:focus-within select { border-color:var(--cyan); }
+ .desk-select:hover::before,.desk-select:focus-within::before { border-left-color:var(--cyan); }
+ .desk-select select:has(option[value=""]:checked) { color:var(--desk-muted); }
+ .desk-select option { color:var(--white); background:var(--desk-input); font:400 16px/1.6 var(--sans); }
+ .desk-select option[value=""] { color:var(--desk-muted); }
  .message-field { margin-top:26px; }
  .field-hint { margin:0; color:var(--desk-muted); font-size:13px; line-height:1.7; }
  .message-field-footer { display:flex; justify-content:space-between; gap:12px; }
@@ -71,3 +80,5 @@
 @media(max-width:480px) { .contact-page { .message-desk { padding:24px 18px 30px; } .desk-direct,.desk-next ol { grid-template-columns:1fr; } .phone-demo-note { grid-column:1; } .desk-direct { padding:22px; } .desk-next ol { gap:24px; } .desk-draft { padding:20px; } .direct-channel strong { font-size:19px; } } }
 
 :root[data-theme=light] .contact-page .desk-field select { color-scheme:light; }
+
+@media(forced-colors:active) { .contact-page .desk-select::before,.contact-page .desk-select::after { display:none; } .contact-page .desk-field .desk-select select { appearance:auto; -webkit-appearance:auto; padding-right:14px; } }

@@ -258,3 +258,8 @@
     padding-inline: 0;
   }
 }
+.blog-single-page .blog-intro h1 {
+  max-width: none;
+  width: 100%;
+  overflow-wrap: break-word;
+}

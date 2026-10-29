@@ -60,3 +60,6 @@
  .article-prose section { scroll-margin-top:20px; }
  .blog-bottom { padding-inline:0; }
 } }
+
+// Article headlines use the full billboard, rather than the index intro measure.
+.blog-single-page .blog-intro h1 { max-width:none; width:100%; overflow-wrap:break-word; }

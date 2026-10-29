@@ -8,21 +8,27 @@
       content="Herr Systems web design creates distinctive, easy-to-use websites for local businesses."
     />
     <meta name="theme-color" content="#164f91" />
-    <title>Web Design — Herr Systems</title>
-    <link rel="icon" type="image/png" href="/assets/davy-hexagon-mark.png" />
+    <title>Web Design // Herr Systems</title>
+    <link rel="stylesheet" href="/retro3.css?v=footer-art-960" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="85x85"
+      href="/assets/davy-hexagon-mark.png"
+    />
     <link rel="icon" href="/favicon.ico" sizes="any" />
   </head>
-  <body>
-    <script type="module" src="/src/main.js"></script>
+  <body class="service-page">
+    <script type="module" src="/src/service-page.js"></script>
     <!-- @include src/components/header.html -->
     <main id="main">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <a href="/">Home</a><span>/</span><a href="/services/">Services</a
         ><span>/</span><span aria-current="page">Web design</span>
       </nav>
-      <section class="service-hero">
+      <section class="web-design-hero panel">
         <div>
-          <p class="eyebrow">SERVICE 01 // WEB DESIGN</p>
+          <p class="kicker">SERVICE 01 // WEB DESIGN</p>
           <h1>A website your<br />business can <em>wear well.</em></h1>
           <p>
             Clear positioning, thoughtful structure, and a visual system that
@@ -35,9 +41,7 @@
           >
         </div>
         <aside class="service-terminal">
-          <div class="terminal-label">
-            <span>HERR // DESIGN SYSTEM</span><b>● READY</b>
-          </div>
+          <div><span>HERR // DESIGN SYSTEM</span><b>● READY</b></div>
           <p><i>01</i> Strategy <b>ON</b></p>
           <p><i>02</i> Structure <b>ON</b></p>
           <p><i>03</i> Visual design <b>ON</b></p>
@@ -45,9 +49,9 @@
           <small>$ making a useful front door_</small>
         </aside>
       </section>
-      <section class="service-detail-grid">
+      <section class="web-detail-grid">
         <div class="detail-copy">
-          <p class="eyebrow">THE SIGNAL</p>
+          <p class="kicker">THE SIGNAL</p>
           <h2>Good design makes the next step obvious.</h2>
           <p>
             Your site should explain what you do before someone has time to get
@@ -61,7 +65,7 @@
           </p>
         </div>
         <div class="deliverables">
-          <p class="eyebrow">WHAT'S INCLUDED</p>
+          <p class="kicker">WHAT'S INCLUDED</p>
           <ul>
             <li><b>01</b><span>Messaging and page strategy</span></li>
             <li><b>02</b><span>Custom responsive page designs</span></li>
@@ -74,8 +78,8 @@
           </ul>
         </div>
       </section>
-      <section class="process-strip">
-        <p class="eyebrow">HOW WE WORK</p>
+      <section class="process-band">
+        <p class="kicker">HOW WE WORK</p>
         <ol>
           <li>
             <b>01</b>
@@ -94,9 +98,9 @@
           </li>
         </ol>
       </section>
-      <section class="contact panel compact-contact">
+      <section class="contact panel service-contact">
         <div>
-          <p class="eyebrow">READY WHEN YOU ARE</p>
+          <p class="kicker">READY WHEN YOU ARE</p>
           <h2>Let’s make your<br />front door <em>useful.</em></h2>
         </div>
         <div class="contact-box">
@@ -113,8 +117,5 @@
       </section>
     </main>
     <!-- @include src/components/footer.html -->
-    <script>
-      document.querySelector('[data-nav="services"]')?.classList.add("active");
-    </script>
   </body>
 </html>

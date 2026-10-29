@@ -1,24 +1,26 @@
-<a class="skip-link" href="#main">Skip to main content</a>
-<header class="global-header">
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header global-header" id="top">
   <div class="header-inner">
-    <a class="logo" href="/" aria-label="Herr Systems home"
-      ><span class="logo-mark"
-        ><img src="/assets/davy-hexagon-mark.png" alt="" /></span
-      ><span><b>HERR</b> SYSTEMS<small>LOCAL WEB SERVICES</small></span></a
-    >
-    <nav class="global-nav" aria-label="Main navigation">
-      <a data-nav="home" href="/">Home</a
-      ><a data-nav="services" href="/services/">Services</a
+    <div class="brand-tools">
+      <a class="logo" href="/" aria-label="Herr Systems home"
+        ><span class="logo-mark" aria-hidden="true"
+          ><img src="/assets/davy-hexagon-mark.png" alt="" /></span
+        ><span><b>HERR</b> SYSTEMS<small>LOCAL WEB SERVICES</small></span></a
+      ><button
+        class="theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-pressed="true"
+        aria-label="Dark mode active — switch to light mode"
+        title="Switch color mode"
+      >
+        <span aria-hidden="true">☀</span>
+      </button>
+    </div>
+    <nav class="nav global-nav" aria-label="Main navigation">
+      <a href="/">Home</a><a class="active" href="/services/">Services</a
       ><a href="/#why">Why Herr</a><a href="/#contact">Contact</a>
     </nav>
-    <button
-      class="theme-toggle"
-      type="button"
-      data-theme-toggle
-      aria-pressed="true"
-      aria-label="Dark mode active — switch to light mode"
-    >
-      <span aria-hidden="true">☀</span>
-    </button>
   </div>
 </header>
+<div class="site-shell"></div>

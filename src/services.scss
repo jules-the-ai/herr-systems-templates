@@ -40,3 +40,9 @@
     .directory-heading h2 { font-size: 27px; }
   }
 }
+
+// Current directory only; archived layouts retain their original presentation.
+.services-list-page .services-directory {
+  .service-art { background: transparent; }
+  .service-art figcaption { color: var(--directory-muted); }
+}

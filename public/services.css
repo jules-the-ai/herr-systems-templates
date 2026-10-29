@@ -167,3 +167,9 @@
     font-size: 27px;
   }
 }
+.services-list-page .services-directory .service-art {
+  background: transparent;
+}
+.services-list-page .services-directory .service-art figcaption {
+  color: var(--directory-muted);
+}

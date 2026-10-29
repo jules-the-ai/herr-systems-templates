@@ -91,6 +91,7 @@
   margin: 12px 0 0;
 }
 .service-detail .detail-fit {
+  align-self: start;
   padding: 26px;
   border: 1px solid var(--line);
   border-top: 3px solid var(--cyan);
@@ -139,48 +140,11 @@
   color: var(--detail-muted);
   font-size: 16px;
 }
-.service-detail .detail-deliverables {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-.service-detail .detail-deliverables article {
-  padding: 24px;
-  background: var(--detail-surface);
-  border: 1px solid var(--line);
-}
-.service-detail .detail-deliverables .detail-label {
-  margin-bottom: 18px;
-}
-.service-detail .detail-deliverables p {
-  margin: 0;
-  color: var(--detail-muted);
-  font-size: 15px;
-}
-.service-detail .detail-scope {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: clamp(24px, 5vw, 60px);
+.service-detail .detail-process-panel {
   margin: 8px 0 0;
   padding: 32px;
   border: 1px solid var(--cyan);
   background: var(--detail-soft-surface);
-}
-.service-detail .detail-scope p {
-  margin: 12px 0 0;
-  color: var(--detail-muted);
-  font-size: 16px;
-}
-.service-detail .detail-scope-options article + article {
-  margin-top: 24px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-}
-.service-detail .detail-scope-options .detail-scope-note {
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px dotted var(--line);
-  font-size: 14px;
 }
 .service-detail a:not(.button) {
   color: var(--cyan);
@@ -260,11 +224,6 @@
   --detail-muted: #304b66;
 }
 
-@media (max-width: 960px) {
-  .service-detail .detail-deliverables {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 @media (max-width: 720px) {
   .service-detail-page .billboard-stage .detail-billboard {
     grid-template-columns: 1fr;
@@ -276,7 +235,7 @@
   .service-detail-page .detail-breadcrumb {
     margin-bottom: 20px;
   }
-  .service-detail .detail-overview, .service-detail .detail-scope, .service-detail .detail-faq {
+  .service-detail .detail-overview, .service-detail .detail-faq {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -287,7 +246,7 @@
     padding: 28px 0;
     scroll-margin-top: 20px;
   }
-  .service-detail .detail-scope {
+  .service-detail .detail-process-panel {
     padding: 24px;
   }
   .service-detail .detail-faq .detail-section-heading {
@@ -312,10 +271,7 @@
   }
 }
 @media (max-width: 480px) {
-  .service-detail .detail-deliverables {
-    grid-template-columns: 1fr;
-  }
-  .service-detail .detail-deliverables article, .service-detail .detail-fit {
+  .service-detail .detail-fit {
     padding: 22px;
   }
 }

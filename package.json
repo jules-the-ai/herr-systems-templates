@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "styles": "sass src/styles.scss src/generated.css --no-source-map && sass src/services.scss public/services.css --no-source-map",
+    "styles": "sass src/styles.scss src/generated.css --no-source-map && sass src/services.scss public/services.css --no-source-map && sass src/services-billboard.scss public/services-billboard.css --no-source-map",
     "dev": "npm run styles && vite",
     "build": "npm run styles && vite build",
     "preview": "vite preview --host 0.0.0.0"

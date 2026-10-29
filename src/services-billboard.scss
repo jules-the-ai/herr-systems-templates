@@ -1,0 +1,54 @@
+// Opt-in variant only. Never override the original services directory.
+.services-billboard-variant {
+  .billboard-stage {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    // Restrained dial-up-era phosphor glow, not another framed panel.
+    background: radial-gradient(ellipse at 86% 100%, #49f5e60c, transparent 60%);
+    &::before, &::after { content: ''; position: absolute; pointer-events: none; z-index: -1; }
+    &::before {
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent 0 3px, #49f5e609 3px 4px),
+        linear-gradient(#49f5e614 1px, transparent 1px),
+        linear-gradient(90deg, #49f5e614 1px, transparent 1px);
+      background-size: auto, 32px 32px, 32px 32px;
+      mask-image: linear-gradient(90deg, transparent 20%, #000 100%);
+    }
+    &::after {
+      width: 4px; height: 4px; top: 22%; right: max(7%, calc((100% - 1240px) / 2 + 38px));
+      background: #49f5e6; opacity: .3;
+      box-shadow: -48px 16px #49f5e6, -44px 16px #49f5e6, -48px 20px #49f5e6,
+        -124px 56px #d5ff48, -120px 56px #d5ff48, -124px 60px #d5ff48,
+        -16px 116px #7953b9, -20px 116px #7953b9, -16px 112px #7953b9,
+        -220px 132px #49f5e6, -224px 132px #49f5e6, -220px 136px #49f5e6;
+      animation: directory-pixel-drift 18s steps(6, end) infinite alternate;
+    }
+    .directory-intro {
+      width: min(1240px, calc(100% - 28px)); margin: 0 auto;
+      padding: 40px calc(24px + clamp(22px, 3vw, 36px));
+      border: 0;
+    }
+  }
+}
+:root[data-theme=light] .services-billboard-variant .billboard-stage {
+  background: radial-gradient(ellipse at 86% 100%, #00657c0c, transparent 60%);
+  &::before {
+    background-image:
+      repeating-linear-gradient(0deg, transparent 0 3px, #00657c08 3px 4px),
+      linear-gradient(#00657c14 1px, transparent 1px),
+      linear-gradient(90deg, #00657c14 1px, transparent 1px);
+  }
+  &::after { background: #00657c; opacity: .25; box-shadow: -48px 16px #00657c, -44px 16px #00657c, -48px 20px #00657c, -124px 56px #4d7000, -120px 56px #4d7000, -124px 60px #4d7000, -16px 116px #7953b9, -20px 116px #7953b9, -16px 112px #7953b9, -220px 132px #00657c, -224px 132px #00657c, -220px 136px #00657c; }
+}
+@keyframes directory-pixel-drift { from { transform: translateY(0); } to { transform: translateY(12px); } }
+@media (max-width: 720px) {
+  .services-billboard-variant .billboard-stage .directory-intro { width: 100%; padding: 30px 40px; }
+}
+@media (max-width: 480px) {
+  .services-billboard-variant .billboard-stage .directory-intro { padding-inline: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-billboard-variant .billboard-stage::after { animation: none; }
+}

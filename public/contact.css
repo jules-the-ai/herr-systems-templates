@@ -20,15 +20,13 @@
   text-underline-offset: 4px;
 }
 .contact-page .desk-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 50px;
-  align-items: center;
   padding: 0 0 32px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--line);
 }
 .contact-page h1 {
-  font: 400 clamp(56px, 7vw, 88px)/0.94 var(--pixel);
-  margin: 12px 0 24px;
+  font: 400 clamp(46px, 6vw, 72px)/1.05 var(--pixel);
+  margin: 12px 0 18px;
   letter-spacing: 0.01em;
 }
 .contact-page h1 em {
@@ -41,41 +39,6 @@
   color: var(--desk-muted);
   max-width: 53ch;
   margin: 0;
-}
-.contact-page .desk-postmark {
-  border: 2px dashed var(--line);
-  outline: 1px solid var(--line);
-  outline-offset: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  padding: 24px 16px;
-  color: var(--cyan);
-  transform: rotate(5deg);
-}
-.contact-page .desk-postmark span, .contact-page .desk-postmark b {
-  font: 500 12px/1.5 var(--mono);
-  letter-spacing: 0.06em;
-}
-.contact-page .desk-postmark svg {
-  width: 130px;
-  height: auto;
-}
-.contact-page .desk-route-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 18px 0;
-  margin: 8px 0 36px;
-  border-block: 1px solid var(--line);
-  color: var(--desk-muted);
-  font: 500 12px/1.6 var(--mono);
-}
-.contact-page .desk-route-strip b {
-  color: var(--cyan);
-  margin-right: 8px;
 }
 .contact-page .desk-layout {
   display: grid;
@@ -332,26 +295,20 @@
 .contact-page .desk-location b {
   color: var(--white);
 }
-.contact-page .desk-bottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  border-top: 1px solid var(--line);
-  margin-top: 42px;
-  padding-top: 30px;
-}
-.contact-page .desk-bottom h2 {
-  font: 400 clamp(30px, 3vw, 40px)/1.1 var(--pixel);
-  max-width: 28ch;
-}
-.contact-page .desk-bottom > div:last-child {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.contact-page .desk-bottom a, .contact-page .desk-draft a:not(.button), .contact-page .desk-errors a {
+.contact-page .desk-draft a:not(.button), .contact-page .desk-errors a {
   color: var(--cyan);
   font-size: 13px;
+  text-underline-offset: 4px;
+}
+.contact-page .desk-context-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  margin-top: 22px;
+}
+.contact-page .desk-context-links a {
+  color: var(--cyan);
+  font: 500 13px/1.8 var(--mono);
   text-underline-offset: 4px;
 }
 .contact-page .desk-errors {
@@ -466,22 +423,6 @@
 @media (max-width: 720px) {
   .contact-page .message-desk {
     padding: 26px 22px 32px;
-  }
-  .contact-page .desk-intro {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .contact-page .desk-postmark {
-    display: none;
-  }
-  .contact-page .desk-route-strip {
-    gap: 12px;
-  }
-  .contact-page .desk-route-strip span {
-    flex: 1 1 150px;
-  }
-  .contact-page .desk-bottom {
-    flex-direction: column;
   }
 }
 @media (max-width: 480px) {

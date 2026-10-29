@@ -5,9 +5,11 @@ A retro-signal local-business site template for Herr Systems. The homepage shell
 ## Pages
 
 - `/` — homepage
-- `/services/` — original service directory (preserved)
-- `/services/billboard/` — alternate directory with the same intro outside the shell, aligned to the 1240px maximum width, plus subtle grid/scanline/pixel effects. Remaining service content and shell are unchanged. Variant-only styles live in `src/services-billboard.scss` and compile to `public/services-billboard.css`. Reduced-motion preferences disable the slow pixel drift.
-- `/services/web-design/` — reusable service-detail page shown with Web Design content
+- `/services/` — main service directory, with exterior billboard
+- `/services/billboard/` — retained preview URL for the approved exterior-billboard design. Shared billboard styles live in `src/services-billboard.scss` and compile to `public/services-billboard.css`. Reduced-motion preferences disable the slow pixel drift.
+- `/services/web-design/` — business-focused service detail template; edit the content here and layout in `src/service-detail.scss` (compiled to `public/service-detail.css`). Reuses the approved billboard, shell, header, footer, and original design illustration.
+- `/archive/services-contained/` — preserved older directory with its intro inside the shell.
+- `/archive/web-design-original/` — preserved previous Web Design template.
 
 ## Editing styles
 

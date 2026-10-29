@@ -5,7 +5,7 @@
     isolation: isolate;
     overflow: hidden;
     // Restrained dial-up-era phosphor glow, not another framed panel.
-    background: radial-gradient(ellipse at 86% 100%, #49f5e60c, transparent 60%);
+    background: radial-gradient(ellipse 65% 80% at 75% 20%, #49f5e60c, transparent 75%);
     &::before, &::after { content: ''; position: absolute; pointer-events: none; z-index: -1; }
     &::before {
       inset: 0;
@@ -14,7 +14,8 @@
         linear-gradient(#49f5e614 1px, transparent 1px),
         linear-gradient(90deg, #49f5e614 1px, transparent 1px);
       background-size: auto, 32px 32px, 32px 32px;
-      mask-image: linear-gradient(90deg, transparent 20%, #000 100%);
+      // Fade the texture to transparent before the lower/right perimeter.
+      mask-image: radial-gradient(ellipse 70% 85% at 65% 15%, #000 10%, transparent 80%);
     }
     &::after {
       width: 4px; height: 4px; top: 22%; right: max(7%, calc((100% - 1240px) / 2 + 38px));
@@ -27,13 +28,13 @@
     }
     .directory-intro {
       width: min(1240px, calc(100% - 28px)); margin: 0 auto;
-      padding: 40px calc(24px + clamp(22px, 3vw, 36px));
+      padding: 40px 0;
       border: 0;
     }
   }
 }
 :root[data-theme=light] .services-billboard-variant .billboard-stage {
-  background: radial-gradient(ellipse at 86% 100%, #00657c0c, transparent 60%);
+  background: radial-gradient(ellipse 65% 80% at 75% 20%, #00657c0c, transparent 75%);
   &::before {
     background-image:
       repeating-linear-gradient(0deg, transparent 0 3px, #00657c08 3px 4px),
@@ -44,10 +45,10 @@
 }
 @keyframes directory-pixel-drift { from { transform: translateY(0); } to { transform: translateY(12px); } }
 @media (max-width: 720px) {
-  .services-billboard-variant .billboard-stage .directory-intro { width: 100%; padding: 30px 40px; }
+  .services-billboard-variant .billboard-stage .directory-intro { width: 100%; padding: 30px 18px; }
 }
 @media (max-width: 480px) {
-  .services-billboard-variant .billboard-stage .directory-intro { padding-inline: 36px; }
+  .services-billboard-variant .billboard-stage .directory-intro { padding-inline: 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .services-billboard-variant .billboard-stage::after { animation: none; }

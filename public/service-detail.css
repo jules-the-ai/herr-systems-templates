@@ -36,12 +36,13 @@
 .service-detail-page .detail-billboard-art {
   justify-self: end;
   width: 100%;
-  max-width: 384px;
+  max-width: 432px;
+  min-width: 0;
   margin: 0;
-  padding: 12px 12px 18px;
-  border: 1px solid #7653ba;
-  background: #160c36;
-  box-shadow: 6px 6px 0 #0b061f;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 .service-detail-page .detail-billboard-art img {
   display: block;
@@ -52,8 +53,9 @@
   image-rendering: pixelated;
 }
 .service-detail-page .detail-billboard-art figcaption {
+  margin-top: 12px;
   text-align: center;
-  color: #b9a8db;
+  color: var(--detail-muted);
   font: 500 12px/1.5 var(--mono);
   letter-spacing: 0.06em;
 }

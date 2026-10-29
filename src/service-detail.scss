@@ -7,9 +7,9 @@
   .detail-breadcrumb a { color: var(--cyan); text-underline-offset: 4px; }
   .detail-billboard .detail-lead { max-width: 56ch; margin: 18px 0 24px; color: var(--detail-muted); font-size: clamp(16px, 1.4vw, 19px); line-height: 1.7; }
   .detail-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
-  .detail-billboard-art { justify-self: end; width: 100%; max-width: 384px; margin: 0; padding: 12px 12px 18px; border: 1px solid #7653ba; background: #160c36; box-shadow: 6px 6px 0 #0b061f; }
+  .detail-billboard-art { justify-self: end; width: 100%; max-width: 432px; min-width: 0; margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; }
   .detail-billboard-art img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; image-rendering: pixelated; }
-  .detail-billboard-art figcaption { text-align: center; color: #b9a8db; font: 500 12px/1.5 var(--mono); letter-spacing: .06em; }
+  .detail-billboard-art figcaption { margin-top: 12px; text-align: center; color: var(--detail-muted); font: 500 12px/1.5 var(--mono); letter-spacing: .06em; }
   a:focus-visible, summary:focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
   // Footer blue-black is stable in both themes, so its links must be too.
   .footer-info a { color: #49f5e6; }
